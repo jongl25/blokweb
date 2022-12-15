@@ -1,0 +1,583 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+button,
+summary {
+  cursor: pointer;
+}
+
+
+body {
+  background-color: rgb(101 46 163);
+}
+
+
+/*---------------------------------------------------------------------*/
+/* HEADER */
+/*---------------------------------------------------------------------*/
+
+header {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  background-color: rgb(101 46 163);
+}
+nav:first-of-type {
+  width: 100%;
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+  margin: 1em;
+}
+
+header nav:first-of-type > img:first-of-type {
+  height: 2.8em;
+}
+
+header nav > a img:first-of-type {
+  height: 2.8em;
+}
+
+header nav > h1 {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 1.8em;
+  letter-spacing: 0.05em;
+  padding-left: 8px;
+  margin-right: 50px;
+}
+
+header nav:first-of-type > button {
+  background-color: rgb(27 186 99);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.7em;
+  font-weight: 550;
+  padding: 6px 18px;
+  border-radius: 20px;
+  border: 0em;
+  box-shadow: 0 5px rgb(22 158 84);
+  margin-left: 20px;
+}
+
+header nav:first-of-type > img:nth-of-type(2) {
+  height: 2em;
+}
+
+
+
+
+/* -------------- */
+/* hamburger menu */
+/* -------------- */
+
+nav:nth-of-type(2) { 
+	position: absolute;
+  top: 0;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  transform: translateX(100%);
+  transition: .3s;
+}
+nav:nth-of-type(2),
+header nav:nth-of-type(2) button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 550;
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+nav li {
+  padding: 1em 0;
+  color: rgb(50, 50, 50);
+  font-size: 1.3em;
+}
+
+header nav:nth-of-type(2) button {
+  width: 70vw;
+  height: 5vh;
+  color: white;
+  padding: 6px 18px;
+  border-radius: 100px;
+  border: 0em;
+  font-size: 1.1em;
+}
+header nav:nth-of-type(2) button:first-of-type {
+  background-color: #8852DA;
+  box-shadow: 0 5px #7748BC;
+}
+header nav:nth-of-type(2) button:nth-of-type(2) {
+  background-color: #1ABA63;
+  box-shadow: 0 5px #149E53;
+}
+
+header nav:nth-of-type(2) img {
+  margin: .5em;
+  width: 10%;
+  align-self: flex-end;
+}
+
+/* classes voor javascript*/
+nav:nth-of-type(2).open {
+  transform: translateX(0);
+  transition: .3s;
+}
+body.geenScroll {
+  overflow: hidden;
+}
+
+
+
+
+/*---------------------------------------------------------------------*/
+/* MAIN */
+/*---------------------------------------------------------------------*/
+
+main {
+  margin-top: 4.8em; /* hoogte van de header */
+}
+main section:first-of-type {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+main section:first-of-type h1 {
+  padding-top: 0.8em;
+  padding-bottom: 0.3em;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+main section:first-of-type h2 {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-align: center;
+  padding-bottom: 1em;
+  position: relative;
+  overflow: hidden;
+  width: 17em;
+}
+
+main section:first-of-type h2 > span {
+  position: absolute;
+  margin-left: -2.8em;
+  top: 0;
+  animation: slide 18s infinite;
+}
+
+@keyframes slide {
+  0% {
+    top: 0;
+  }
+  12.5% {
+    top: -1.1em;
+  }
+  25% {
+    top: -2.3em;
+  }
+  37.5% {
+    top: -3.5em;
+  }
+  50% {
+    top: -4.7em;
+  }
+  62.5% {
+    top: -5.9em;
+  }
+  75% {
+    top: -7em;
+  }
+  87.5% {
+    top: -8.2em;
+  }
+  100% {
+    top: -9.4em;
+  }
+}
+
+main section:first-of-type p {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 16px;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 2em;
+}
+
+main section:first-of-type button {
+  display: flex;
+  margin-top: 1.6em;
+  background-color: rgb(27 186 99);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  font-weight: 550;
+  padding: 12px 32px;
+  border-radius: 20px;
+  border: 0em;
+  box-shadow: 0 5px rgb(22 158 84);
+}
+
+main section:first-of-type a {
+  display: flex;
+  vertical-align: middle;
+  margin-top: 2.5em;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+main section:first-of-type > video {
+  margin-top: 2em;
+}
+
+main section:first-of-type video {
+  width: 50%;
+  height: 50%;
+}
+
+main section:nth-of-type(2) {
+  background-color: rgba(242, 241, 244, 255);
+  margin-top: 2em;
+  margin-left: -2em;
+  margin-right: 0em;
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+}
+
+main section:nth-of-type(2) ul:first-of-type {
+  display: flex;
+  gap: 0.5em;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior: contain auto;
+  -webkit-overflow-scrolling: touch;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(50 48 54);
+  list-style: none;
+  padding: 1em 3em;
+}
+
+main section:nth-of-type(2) li button {
+  display: flex;
+  background: white;
+  position: relative;
+  margin: 0;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 2em;
+  padding-right: 2em;
+  border-radius: 10px;
+  border: 0em;
+  box-shadow: 1px 1px 1px 1px rgba(10, 10, 10, 0.1);
+}
+
+main section:nth-of-type(2) li button p {
+  padding-top: 0.5em;
+  padding-left: 0.2em;
+}
+
+main section:nth-of-type(3) {
+  background-color: white;
+}
+
+main section:nth-of-type(3) h2 {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-align: center;
+  padding-top: 3em;
+  padding-bottom: 0.7em;
+}
+
+main section:nth-of-type(3) p:first-of-type {
+  color: rgb(230, 138, 0);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  font-size: 1.5em;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3em;
+}
+
+main section:nth-of-type(3) p:first-of-type img {
+  vertical-align: middle;
+  width: 30%;
+  padding-bottom: 0.3em;
+}
+
+main section:nth-of-type(3) p:last-of-type {
+  color: rgb(112, 122, 131);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 550;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 3em;
+}
+
+article {
+  background-color: white;
+  width: 100%;
+  height: 48em;
+}
+
+article ul {
+  margin: 0;
+  display: flex;
+  overflow: scroll;
+  height: 40rem;
+}
+
+article ul li {
+  margin: 0 2em;
+  border: 0.1em solid lightgrey;
+  border-radius: 0.5em;
+  height: 38.8em;
+  width: 20.5em;
+  list-style: none;
+  flex-shrink: 0;
+  position: relative;
+}
+
+article ul li img:first-of-type {
+  width: 50%;
+  padding-left: 1.4em;
+  padding-top: 1em;
+}
+
+article ul li h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  font-size: 1.2em;
+  padding-left: 1.4em;
+  padding-top: 1em;
+}
+
+article ul li p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(112, 122, 131);
+  font-weight: 500;
+  font-size: 1em;
+  padding-left: 1.7em;
+  padding-right: 1.2em;
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+  line-height: 1.6em;
+}
+
+article ul li img:last-of-type {
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+}
+
+article a img {
+  width: 6%;
+}
+article a {
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+  margin-top: 2.5em;
+  margin-bottom: 2em;
+  color: rgb(101 46 163);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 1.1em;
+  text-decoration: none;
+  gap: 0.5em;
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 3s;
+}
+
+.show {
+  opacity: 1;
+}
+
+section:nth-of-type(4) {
+  background-color: rgba(242, 241, 244, 255);
+  height: 40em;
+}
+
+section:nth-of-type(4) img:first-of-type {
+  padding: 2em;
+  width: 100%;
+}
+
+section:nth-of-type(4) h2 {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-align: center;
+  padding-bottom: 0.5em;
+}
+
+section:nth-of-type(4) p {
+  color: rgb(112, 122, 131);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 510;
+  font-size: 0.9em;
+  line-height: 1.4em;
+  letter-spacing: 0.05em;
+  text-align: center;
+  padding: 1.2em;
+}
+
+section:nth-of-type(4) a {
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+  color: rgb(101 46 163);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 1.1em;
+  text-decoration: none;
+  gap: 0.5em;
+  margin-top: 2em;
+}
+
+section:nth-of-type(4) a img:last-of-type {
+  padding: 0em;
+  width: 7%;
+}
+
+section:nth-of-type(5) {
+  background-color: white;
+  margin-top: -2em;
+  height: 20em;
+  transform: translate(-50% -50%);
+}
+
+section:nth-of-type(5) h4 {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.4em;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-align: center;
+  padding-bottom: 0.3em;
+  padding-top: 1.8em;
+}
+
+section:nth-of-type(5) p {
+  color: rgb(112, 122, 131);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 510;
+  font-size: 0.9em;
+  line-height: 1.4em;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+.pakketten {
+  background-color: rgba(242, 241, 244, 255);
+  padding-left: 2em;
+}
+
+.pakketten h2 {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 2em;
+  padding-bottom: 0.7em;
+}
+
+.pakketten button {
+  background-color: white;
+  border-radius: 0.5em;
+  border-color: white;
+  margin: 0.6em 2em;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 85%;
+  height: 8em;
+  border: 0em;
+  box-shadow: 0 5px rgb(193, 194, 196);
+}
+
+.pakketten button img {
+  position: relative;
+  right: 8em;
+  top: 1.5em;
+  width: 30%;
+}
+
+.pakketten button h3 {
+  position: relative;
+  bottom: 2.7em;
+  left: 7.6em;
+  text-align: left;
+}
+
+.pakketten button p {
+  position: relative;
+  bottom: 2.4em;
+  left: 7.4em;
+  color: rgb(112, 122, 131);
+  font-size: 1.2em;
+  text-align: left;
+}
+
+.pakketten button:first-of-type {
+  position:relative;
+  overflow:hidden;
+}
+
+.pakketten button:first-of-type h4{
+  font-family: Arial, Helvetica, sans-serif;
+  position:absolute;
+  right:-2.5em;
+  bottom: 4.5em;
+  width: 8em;
+  margin:0;
+  transform:rotate(45deg);
+  line-height: 4em;
+  text-align: center;
+  background-color: rgb(237 62 132);
+  color: white;
+}
+
+
+
